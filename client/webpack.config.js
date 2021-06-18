@@ -53,4 +53,4 @@ module.exports = (_, argv) => ({
       template: './src/index.html',
     }),
   ],
-}
+})
