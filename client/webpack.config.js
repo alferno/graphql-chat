@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 const deps = require('./package.json').dependencies
 module.exports = {
-  entry: './src/index.js',
+  entry: { index: path.resolve(__dirname, 'src', 'App.jsx') },
 
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -55,7 +55,7 @@ module.exports = {
       shared: require('./package.json').dependencies,
     }),
     new HtmlWebPackPlugin({
-      template: path.resolve('./src/index.html'),
+      template: path.resolve(__dirname, 'src', 'index.html'),
     }),
   ],
 }
