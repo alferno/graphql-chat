@@ -3,6 +3,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 const deps = require('./package.json').dependencies
 module.exports = (_, argv) => ({
+  entry: '.src/index.js',
   output: {
     publicPath: argv.mode === 'development' ? 'http://localhost:8080/' : 'https://upbeat-fermat-f5ec95.netlify.app/',
   },
