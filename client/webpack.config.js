@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 const deps = require('./package.json').dependencies
 module.exports = {
-  entry: './src/app.jsx',
+  entry: './src/index.js',
 
   output: {
     path: __dirname + '/dist',
