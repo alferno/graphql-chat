@@ -1,9 +1,10 @@
+const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 
 const deps = require('./package.json').dependencies
-module.exports = (_, argv) => ({
-  entry: './src/App.jsx',
+module.exports = {
+  entry: './src/index.js',
   output: {
     publicPath: 'https://upbeat-fermat-f5ec95.netlify.app',
   },
@@ -51,7 +52,7 @@ module.exports = (_, argv) => ({
       shared: require('./package.json').dependencies,
     }),
     new HtmlWebPackPlugin({
-      template: './src/index.html',
+      template: path.resolve('./src/index.html'),
     }),
   ],
-})
+}
