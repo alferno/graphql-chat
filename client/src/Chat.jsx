@@ -1,5 +1,4 @@
 import React from 'react'
-import { render } from 'react-dom'
 import {
   ApolloClient,
   InMemoryCache,
@@ -12,7 +11,7 @@ import { WebSocketLink } from '@apollo/client/link/ws'
 import { Container, Row, Col, FormInput, Button } from 'shards-react'
 
 const link = new WebSocketLink({
-  uri: `ws://localhost:4000/`,
+  uri: `ws://graphql-chat-2.herokuapp.com//`,
   options: {
     reconnect: true,
   },
@@ -20,7 +19,7 @@ const link = new WebSocketLink({
 
 const client = new ApolloClient({
   link,
-  uri: 'http://localhost:4000',
+  uri: 'https://graphql-chat-2.herokuapp.com/',
   cache: new InMemoryCache(),
 })
 
