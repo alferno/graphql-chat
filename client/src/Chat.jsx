@@ -11,7 +11,7 @@ import { WebSocketLink } from '@apollo/client/link/ws'
 import { Container, Row, Col, FormInput, Button } from 'shards-react'
 
 const link = new WebSocketLink({
-  uri: `ws://graphql-chat-2.herokuapp.com//`,
+  uri: `ws://graphql-chat-2.herokuapp.com/`,
   options: {
     reconnect: true,
   },
