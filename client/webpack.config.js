@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 
 const deps = require('./package.json').dependencies
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/app.jsx',
   output: {
     publicPath: 'https://upbeat-fermat-f5ec95.netlify.app',
   },
